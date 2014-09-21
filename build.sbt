@@ -4,7 +4,11 @@ version := "1.0"
     
 //lazy val root = (project in file(".")).enablePlugins(PlayScala)    
     
-scalaVersion := "2.11.1"
+scalaVersion := "2.11.2"
+    
+resolvers in ThisBuild += "Sonatype Snapshots" at "https://oss.sonatype.org/content/repositories/snapshots/"   
+    
+resolvers in ThisBuild += "Typesafe Maven Repository" at "http://repo.typesafe.com/typesafe/maven-releases/"
 
 libraryDependencies ++= Seq(
 //  "org.webjars" %% "webjars-play" % "2.3.0",
@@ -25,5 +29,5 @@ libraryDependencies ++= Seq(
 //  "org.scalikejdbc" %% "scalikejdbc" % "2.1.2",
 //  "ch.qos.logback"  %  "logback-classic" % "1.1.2"
 //  "org.scalatest" %% "scalatest" % "2.1.6" % "test"
-//"org.reactivemongo" %% "reactivemongo" % "0.10.0"
+//  "org.reactivemongo" %% "reactivemongo" % "0.11.0-SNAPSHOT"
 )
